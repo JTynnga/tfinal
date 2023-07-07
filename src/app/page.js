@@ -33,14 +33,14 @@ function LocationIcon() {
 export default function Home() {
   const [sideBar, setSideBar] = useState(false);
   const [current, setCurrent] = useState([]);
-  const [city, setCity]       = useState("trapoto");
+  const [city, setCity]       = useState("tarapoto");
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=tarapoto&appid=997e57cd6e45963a8dc587afdfdfe6e4&units=metric`);
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=997e57cd6e45963a8dc587afdfdfe6e4&units=metric`);
       const data = await res.json();
-      setCurrent(data);
-      console.log(data);
+      setCurrent(data[0]);
+      console.log(data[0]);
  /*   if (res.ok == true) {
         const data = await res.json();
         setCurrent(data.list[0]);
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <div id="navBar-data">
            <p>
-             <span>{current.main.temp}</span>°C
+           <span>32</span>°C
            </p>
            <p>Shower</p>
            <p>
