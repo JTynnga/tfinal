@@ -57,12 +57,24 @@
     justify-content: space-between;
     align-items: center;
 }
+#fore-btns {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
 
+#foreTemp > p:nth-child(2) {
+    color:#6e707a
+}
 #navBar-data > p:first-child {
     font-size: 50px;
 }
 #navBar-data > p:first-child > span {
     font-size: 144px;
+}
+#hightCards > p:nth-child(2) > span {
+    font-size: 50px;
 }
 #navBar-data > p:nth-child(2) {
     font-size: 36px;
@@ -83,22 +95,67 @@
 #navBar-data > p:nth-child(4) > span > img {
     width: 30%;
     display: flex;
-       
 }
 #forecast {
+    color: white;
     background-color: rgb(16, 14, 29);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-@media screen and (min-width: 1200px) {
-    #container {
-        flex-direction: row;
-    }
-    #currentWeather {
-        width: 30%;
-    }
-    #forecast {
-        width: 70%;
-    }
+#forecast1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#forecastCards {
+    padding: 2rem;
+    margin: 20px;
+    font-size: 16px;
+    gap: 1rem;
+    height:30vh;
+    background-color: rgb(30, 33, 58);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hight1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hight2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hightCards {
+    padding: 2rem;
+    margin: 20px;
+    font-size: 16px;
+    gap: 1rem;
+    height:20vh;
+    width: 40vh;
+    background-color: rgb(30, 33, 58);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#foreTemp {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
 }
 #btnSearch {
     background: #6e707a;
@@ -116,3 +173,41 @@
     border: 0;
     cursor: pointer;
 }
+ 
+@media screen and (min-width: 1200px) {
+    #container {
+        flex-direction: row;
+    }
+    #currentWeather {
+        width: 30%;
+    }
+    #forecast {
+        width: 70%;
+    }
+    #forecast1 {
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #hight1 {
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #hight2 {
+        height: 60vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #forecastCards {
+        height:50%;
+    }
+}
+
